@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--LINKS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Dark Mode using JS</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="toggle">
+        <img src="/assets/moon.png" alt="" />
+        <img src="/assets/sun.png" style="display: none" />
+      </div>
+      <section class="dark-add">
+        <h1 class="heading" id="heading">LIGHT MODE</h1>
+        <p class="paragraph" id="paragraph">
+          All is light but the lucid line Marked by the black shadow surf on the
+          level sand, Or where afar the ship-lights faintly shine Like wandering
+          fairy fires, that oft on land Misled the pilgrim …
+        </p>
+      </section>
+    </div>
+    <!--Function-->
+    <script>
+      $(document).ready(function () {
+        $("img").click(function () {
+          $(".toggle").find("img").toggle();
+
+          var $heading = $("h1");
+          $heading.text(
+            $heading.text() == "LIGHT MODE" ? "DARK MODE" : "LIGHT MODE"
+          );
+          var $para = $("p");
+          $para.text(
+            $para.text() ==
+              "All is light but the lucid line Marked by the black shadow surf on the level sand, Or where afar the ship-lights faintly shine Like wandering fairy fires, that oft on land Misled the pilgrim …"
+              ? "All is black shadow but the lucid line Marked by the light surf on the level sand, Or where afar the ship-lights faintly shine Like wandering fairy fires, that oft on land Misled the pilgrim …"
+              : "All is light but the lucid line Marked by the black shadow surf on the level sand, Or where afar the ship-lights faintly shine Like wandering fairy fires, that oft on land Misled the pilgrim …"
+          );
+          $("body").toggleClass("alt-cont");
+          $("p").toggleClass("white");
+        });
+      });
+    </script>
+  </body>
+</html>
