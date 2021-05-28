@@ -1,0 +1,82 @@
+html,
+body {
+  margin: 0;
+  padding: 5%;
+  box-sizing: border-box;
+  font-family: "Monument Extended", sans-serif;
+  overflow-x: hidden;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+img {
+  width: 60px;
+  height: 60px;
+}
+.toggle:hover {
+  transform: rotate(360deg);
+  transition: ease-in-out 2s;
+  width: 50px;
+}
+.toggle {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  margin-top: 30px;
+  top: 0;
+  left: 90%;
+  cursor: pointer;
+}
+section {
+  width: 900px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+}
+.heading {
+  margin-top: 90px;
+  padding-top: 50px;
+  text-align: center;
+  font-size: 160px;
+  color: #161616;
+  -webkit-text-stroke: white 1px;
+  letter-spacing: 16px;
+}
+.paragraph {
+  margin-top: -30px;
+  text-align: center;
+  font-size: 16px;
+  color: black;
+  letter-spacing: 3px;
+  line-height: 25px;
+}
+.alt-cont {
+  color: white;
+  background-color: #161616;
+}
+.white {
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  img {
+    width: 40px;
+    height: 40px;
+  }
+  .toggle {
+    left: 84%;
+  }
+  .heading {
+    font-size: 60px;
+  }
+  section {
+    width: 100%;
+  }
+}
