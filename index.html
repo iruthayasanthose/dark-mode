@@ -12,8 +12,7 @@
   <body>
     <div class="container">
       <div class="toggle">
-        <img src="/assets/moon.png" alt="" />
-        <img src="/assets/sun.png" style="display: none" />
+        <img src="/assets/moon.png" />
       </div>
       <section class="dark-add">
         <h1 class="heading" id="heading">LIGHT MODE</h1>
@@ -28,8 +27,6 @@
     <script>
       $(document).ready(function () {
         $("img").click(function () {
-          $(".toggle").find("img").toggle();
-
           var $heading = $("h1");
           $heading.text(
             $heading.text() == "LIGHT MODE" ? "DARK MODE" : "LIGHT MODE"
@@ -40,6 +37,12 @@
               "All is light but the lucid line Marked by the black shadow surf on the level sand, Or where afar the ship-lights faintly shine Like wandering fairy fires, that oft on land Misled the pilgrim …"
               ? "All is black shadow but the lucid line Marked by the light surf on the level sand, Or where afar the ship-lights faintly shine Like wandering fairy fires, that oft on land Misled the pilgrim …"
               : "All is light but the lucid line Marked by the black shadow surf on the level sand, Or where afar the ship-lights faintly shine Like wandering fairy fires, that oft on land Misled the pilgrim …"
+          );
+          $("img").attr(
+            "src",
+            $("img").attr("src") == "assets/moon.png"
+              ? "assets/sun.png"
+              : "assets/moon.png"
           );
           $("body").toggleClass("alt-cont");
           $("p").toggleClass("white");

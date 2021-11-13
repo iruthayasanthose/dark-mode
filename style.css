@@ -19,8 +19,8 @@ img {
   height: 60px;
 }
 .toggle:hover {
-  transform: rotate(360deg);
-  transition: ease-in-out 2s;
+  transform: rotate(270deg);
+  transition: ease-in-out 1s;
   width: 50px;
 }
 .toggle {
@@ -74,6 +74,7 @@ section {
     left: 84%;
   }
   .heading {
+    margin-top: 40px;
     font-size: 60px;
   }
   section {
