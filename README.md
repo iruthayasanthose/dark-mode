@@ -29,8 +29,8 @@ Dark mode function using jQuery is a simple code part to demonstrate the transit
 
 ## Screenshots
 
-![Light Mode](./img/screenshot.png)
-![Dark Mode](./img/screenshot.png)
+![Light Mode](./img/screenshot1.png)
+![Dark Mode](./img/screenshot2.png)
 
 ## Question
 
